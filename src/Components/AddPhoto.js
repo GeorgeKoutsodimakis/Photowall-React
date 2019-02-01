@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class AddPhoto extends Component {
 
@@ -15,25 +15,25 @@ class AddPhoto extends Component {
             description: description,
             imageLink: imageLink
         }
-        if (description && imageLink){
-            this.props.onAddPhoto(post)
+        if (description && imageLink) {
+            this.props.addPost(post)
+            this.props.onHistory.push('/')
         }
 
     }
 
     render() {
         return (
-    <div>
-        <h1> Photowall </h1>
-        <div className="form">
-          <form onSubmit={this.handleSubmit}> 
-               <input type ="text" placeholder="Link" name="link"/>
-               <input type ="text" placeholder="Desciption" name="description"/>
-               <button> Post </button>
-          </form>
-        </div>
-    </div>
-    )
+            <div>
+                <div className="form">
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" placeholder="Link" name="link" />
+                        <input type="text" placeholder="Desciption" name="description" />
+                        <button> Post </button>
+                    </form>
+                </div>
+            </div>
+        )
     }
 }
 
