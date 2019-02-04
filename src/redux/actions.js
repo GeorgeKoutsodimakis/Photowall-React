@@ -15,9 +15,10 @@ export function addPost(post) {
     }
 }
 
-export function addComment(comments){
+export function addComment(comment,postId){
     return{
         type: 'ADD_COMMENT',
-        comments
+        comment,
+        postId
     }
 }

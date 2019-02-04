@@ -18,6 +18,7 @@ function Photo(props) {
         <div className="button-container">
             <button className="button" onClick={() => {
                 props.removePosts(props.index)
+                props.history.push('/')
             }}>
                 Remove
             </button>

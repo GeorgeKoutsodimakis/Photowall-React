@@ -10,7 +10,8 @@ class Comments extends Component {
     handleSubmit(event) {
         event.preventDefault()
         const comment = event.target.elements.comment.value
-        this.props.addComment(comment)
+        const id = this.props.id
+        this.props.addComment(comment,id)
     }
 
     render() {
